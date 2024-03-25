@@ -102,7 +102,7 @@ Remember ENV variables need to be in ""
 # Github
 
 ```bash
-git clone https://github.com/Noaj/<NAMEOF THE PROJECT>.git
+git clone https://github.com/Noaj/weather_service.git
 ```
 
 # Start the project
