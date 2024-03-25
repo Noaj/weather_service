@@ -81,12 +81,21 @@ Visual Crossing Weather is the easiest-to-use and lowest-cost source for histori
 
 Please create an account and get the API keys if you want to use this web app.
 
-NOTE: For the purpose of the interview tasks, the current API keys are provided in the email. or in this URL: <URL>
+NOTE: For the purpose of the interview tasks, the current API keys are provided in the email or the URL at the end: Only will last 7 days from 03-25-2024
 
-After getting the API keys, you have to set the ENV variables. There is a file in the root directory named `.env.development`, open the file and add:
+#### StreetAddress
+Is a Address validation tool, you can check that out [Address API](https://www.smarty.com/products/apis/us-autocomplete-pro-api "SmartyStreet API"). You can create a free account to get the token and api key or take the once provided at the end along with the VisualCrossing API keys.
+
+To get the credentials go to: https://onetimesecret.com/secret/crpbl9pk5br2xk5lhhrzyu1a1ux4mz This link only last 7 days
+
+After getting the API keys, you have to set the ENV variables. There is a file in the root directory named `.env.development`, open the file and add the variables like this:
+
 ```bash
-VISUALCROSSING_API_URL="https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/"
-VISUALCROSSING_API_KEY="<YOUR API KEY>"
+VISUALCROSSING_API_URL="XXXYYYYXXXXXYY"
+VISUALCROSSING_API_KEY="XXXYXXXXXYX"
+
+SMARTY_STREETS_AUTH_ID="XXXYXYYXXX"
+SMARTY_STREETS_AUTH_TOKEN="XXYXYYXYYX"
 ```
 Remember ENV variables need to be in ""
 
