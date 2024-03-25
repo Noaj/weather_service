@@ -1,0 +1,11 @@
+development: &development
+  api_url: <%= ENV['VISUALCROSSING_API_URL'] { "https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/" } %> 
+  api_key: <%= ENV['VISUALCROSSING_API_KEY'] { "6TSPFYECQVF6VLL38QP7LV4JF" }  %>
+
+test:
+  <<: *development
+
+production:
+  api_url: <%= ENV['VISUALCROSSING_API_URL'] %> 
+  api_key: <%= ENV['VISUALCROSSING_API_KEY'] %>
+ 

@@ -1,0 +1,27 @@
+<section class="vh-100" style="background-color: #C1CFEA;">
+  <div class="container py-5 h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100" style="color: #282828;">
+      <div class="col-md-9 col-lg-7 col-xl-5">
+        <div class="card shadow-0 border">
+          <div class="card-body p-4">
+            <h3 class="mb-4 pb-2 fw-normal">Check the weather forecast</h3> 
+            <div class="form-control rounded">
+                <%= form_tag('/weather_forecasts', data: { turbo: false },local: true) do %>
+                    <%= label_tag(:address, "Address:") %>
+                    <%= text_field_tag(:address, nil, pattern:"[0-9]{1,5}( [0-9a-zA-Z.]*){1,4},?( [a-zA-Z]*){1,3},? [a-zA-Z]{2},? [0-9]{5}", 
+                    placeholder: '9725 W 884 Goliad, TX 77963', title:"For example: 9725 W 884 Goliad, TX 77963", required: true, size:"23") %>
+                    <%= submit_tag("Submit", class: "btn btn-primary m-1") %>
+                <% end %>
+            </div>
+            <p><strong>Note:</strong> Address pattern: number street_name, State zipcode </p>
+            <% flash.each do |flash_type, message| %>
+              <div class="flash__message alert alert-warning">
+                <%= message %>
+              </div>
+            <% end %>  
+          </div>
+        </div>         
+      </div>
+    </div>
+  </div>
+</section>

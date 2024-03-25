@@ -1,0 +1,26 @@
+require: rubocop-rails
+Style/FrozenStringLiteralComment:
+  Enabled: true
+Style/Documentation:
+  Enabled: false
+Style/StringLiterals:
+  Exclude:
+    - Gemfile
+    - Rakefile
+    - test/test_helper.rb
+    - config/boot.rb
+    - config/importmap.rb
+    - config/application.rb
+    - config/initializers/assets.rb
+    - config/environments/test.rb
+    - config/environments/development.rb
+    - config/environments/production.rb
+    - app/mailers/application_mailer.rb
+Naming/FileName:
+  Exclude:
+    - config/_PUMA.rb
+    - config/_SCHEDULE.rb
+    - config/initializers/_CHEWY.rb
+    - config/initializers/_CONFIG.rb
+    - config/initializers/_REDIS.rb
+    - config/initializers/_SIDEKIQ.rb

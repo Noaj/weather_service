@@ -1,0 +1,15 @@
+<section class="vh-100" style="background-color: #C1CFEA;">
+  <div class="container py-5 h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100" style="color: #282828;">
+      <div class="col-md-9 col-lg-7 col-xl-5">
+        <div class="card shadow-0 border">
+          <div class="card-body p-4"> 
+            <%= render partial: "current_weather", locals: { weather: @weather } %>
+            <%= render partial: "hourly_weather", locals: { weather: @weather } %>
+            <%= render partial: "five_days_forecast", locals: { weather: @weather } %>
+          </div>
+        </div>         
+      </div>
+    </div>
+  </div>
+</section>

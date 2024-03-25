@@ -1,0 +1,21 @@
+<div class="card mb-4" style="border-radius: 25px;">
+    <div class="card-body p-4">
+        <div class="carousel-inner">
+            <div class="carousel-item active" id="five_days_forecast_section">
+                <strong> 5-day Forecast </strong>
+                <div class="d-flex justify-content-around text-center mb-4 pb-3 pt-2">
+                    <% @weather['days'].each do |day| %>
+                        <div class="flex-column">
+                            <p class="small"><strong><%= day['datetime'].to_date.strftime("%h %d") %></strong></p>
+                            <p class="mb-0"><strong><%= day['temp'] %> °F</strong></p>
+                            <i class="fas <%= @weather_icons[day['icon']] %> fa-2x mb-3" style="color: #ddd;"></i>
+                            <p class="small"><strong><%= day['tempmax'] %>° / <%= day['tempmin'] %>°</strong></p>
+                        </div>
+                    <% end %>
+                </div>
+            </div>            
+        </div>                
+    </div>
+</div>
+<%# fa-sun , fa-cloud, %>
+
